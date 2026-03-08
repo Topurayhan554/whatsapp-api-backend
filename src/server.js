@@ -48,12 +48,9 @@ app.use(errorHandler);
 
 initializeSocket(io);
 
-//  WhatsApp Initialize
-
 whatsappService.initialize();
 
 //  Server Start
-
 server.listen(config.server.port, () => {
   logger.info(`Server running on port ${config.server.port}`);
   logger.info(`Environment: ${config.server.nodeEnv}`);
